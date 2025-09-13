@@ -12,6 +12,10 @@ The velocity and scale of online discourse necessitate tools that go beyond bina
 
 Prior research spans stance detection, argument mining, RAG pipelines, and moderation tooling. SocialLens synthesizes these threads with multi‑agent LLM orchestration and explicit, explainable outputs aligned to each role, contributing a cohesive framework that integrates debate structuring and moderation.
 
+2.1 Background
+
+Argument mining provides techniques for extracting claims and premises, while stance detection identifies support versus opposition. Retrieval‑augmented generation (RAG) grounds model outputs in external knowledge to improve verifiability. SocialLens builds on these foundations by assigning specialized roles to agents and requiring fact‑grounded justifications.
+
 3. System Design
 
 3.1 Roles and Responsibilities
@@ -39,6 +43,12 @@ Parallel retrieval, batched embedding queries, and lightweight agent prompts ena
 4. Methodology
 
 Datasets: curated social posts and debate excerpts with labels for misinformation risk and bias features. Splits ensure temporal separation to reduce leakage. Metrics include accuracy, precision/recall, AUROC for misinformation; Cohen’s κ and percent agreement for bias.
+
+4.1 Protocols
+
+- Annotation: double‑blind labeling with adjudication for disagreements
+- Calibration: threshold selection via dev set; report confidence intervals
+- Ablations: remove retrieval, vary prompt specificity, and alter agent counts
 
 5. Results
 

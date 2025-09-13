@@ -23,6 +23,21 @@ footer { text-align:center; color:var(--muted); padding:24px; border-top:1px sol
 h1, h2, h3 { letter-spacing:0.2px; }
 p { line-height:1.6; color:var(--muted); }
 
+/* Navbar and hero */
+.navbar { position:sticky; top:0; z-index:50; background:rgba(10,14,32,0.72); backdrop-filter:saturate(180%) blur(12px); border-bottom:1px solid #1d2759; }
+.navbar .brand { font-weight:800; letter-spacing:0.4px; }
+.navbar .navbar-inner { display:flex; align-items:center; justify-content:space-between; height:60px; }
+.navbar .navlinks a { color:#b4c2ff; text-decoration:none; margin-left:16px; border:1px solid transparent; padding:6px 10px; border-radius:8px; }
+.navbar .navlinks a:hover { border-color:#2b3b86; background:#111949; }
+
+.hero { background:radial-gradient(1200px 400px at 10% -10%, rgba(110,150,255,0.18), transparent), radial-gradient(1000px 380px at 90% -20%, rgba(150,120,255,0.12), transparent); border-bottom:1px solid #1d2759; }
+.hero-inner { display:grid; grid-template-columns:1.3fr 0.7fr; gap:20px; padding:48px 0; }
+.hero-title { font-size:40px; margin:10px 0 6px; }
+.hero-subtitle { margin:0; color:#b8c4ef; }
+.hero-actions { margin-top:16px; display:flex; gap:12px; }
+.btn-primary { display:inline-block; background:linear-gradient(90deg, #6aa6ff, #85b5ff); color:#05122e; font-weight:800; padding:10px 14px; border-radius:8px; text-decoration:none; box-shadow:0 8px 20px rgba(106,166,255,0.35); }
+.hero-card { align-self:center; }
+
 /* Card polish and interactions */
 .card { position:relative; border:1px solid rgba(255,255,255,0.05); transition:transform .18s ease, box-shadow .18s ease, border-color .18s ease; }
 .card:hover { transform:translateY(-2px); box-shadow:0 10px 30px rgba(0,0,0,0.35); border-color:#2b3b86; }
@@ -60,6 +75,8 @@ pre { font-size:14px; line-height:1.45; background:linear-gradient(180deg, #0e15
   .span-2 { grid-column: span 1; }
   header { padding:20px; }
   main { padding:20px; }
+  .hero-inner { grid-template-columns:1fr; padding:28px 0; }
+  .hero-title { font-size:32px; }
 }
 
 /* Utility spacing */
