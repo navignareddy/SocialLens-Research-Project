@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="assets/banner.svg" alt="SocialLens banner" width="100%"/>
+<img src="https://raw.githubusercontent.com/navignareddy/SocialLens-Research-Project/main/assets/banner.svg" alt="SocialLens banner" width="100%"/>
 
 # SocialLens: Multi‑Agent Social Media Debate Analysis & Moderation
 
