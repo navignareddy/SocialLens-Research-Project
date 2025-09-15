@@ -18,3 +18,62 @@ pre { white-space:pre-wrap; word-wrap:break-word; background:#0e1540; border:1px
 footer { text-align:center; color:var(--muted); padding:24px; border-top:1px solid #1d2759; }
 
 
+/* Enhanced theme and typography */
+.container { max-width:1100px; margin:0 auto; padding:0 20px; }
+h1, h2, h3 { letter-spacing:0.2px; }
+p { line-height:1.6; color:var(--muted); }
+
+/* Card polish and interactions */
+.card { position:relative; border:1px solid rgba(255,255,255,0.05); transition:transform .18s ease, box-shadow .18s ease, border-color .18s ease; }
+.card:hover { transform:translateY(-2px); box-shadow:0 10px 30px rgba(0,0,0,0.35); border-color:#2b3b86; }
+
+/* Buttons */
+.actions { flex-wrap:wrap; }
+button { position:relative; overflow:hidden; box-shadow:0 6px 16px rgba(33,114,255,0.25); }
+button:focus-visible { outline:3px solid rgba(106,166,255,0.6); outline-offset:2px; }
+.btn-secondary { background:#1e2b64; color:#dfe7ff; }
+.btn-ghost { background:transparent; border:1px solid #2a3774; color:#b9c3eb; }
+
+/* Inputs */
+textarea { transition:border-color .2s ease, box-shadow .2s ease, background .2s ease; }
+textarea:focus { outline:none; border-color:#3650b4; box-shadow:0 0 0 4px rgba(54,80,180,0.25); background:#0c1340; }
+
+/* Output blocks */
+pre { font-size:14px; line-height:1.45; background:linear-gradient(180deg, #0e1540 0%, #0b1134 100%); border-radius:12px; }
+.success { border-left:3px solid #55d69e; }
+.warning { border-left:3px solid #ffcf66; }
+.danger { border-left:3px solid #ff7a7a; }
+
+/* Subtle gradient borders */
+.panel, .card { background:
+  linear-gradient(var(--card), var(--card)) padding-box,
+  linear-gradient(180deg, rgba(146,169,255,0.25), rgba(22,27,64,0.6)) border-box;
+  border:1px solid transparent;
+}
+
+/* Badges */
+.badge { display:inline-block; padding:4px 8px; border-radius:999px; background:#1b2352; color:#9fb3ff; border:1px solid #273176; font-size:12px; font-weight:600; }
+
+/* Layout responsiveness */
+@media (max-width: 860px) {
+  .grid { grid-template-columns:1fr; }
+  .span-2 { grid-column: span 1; }
+  header { padding:20px; }
+  main { padding:20px; }
+}
+
+/* Utility spacing */
+.mt-0 { margin-top:0; }
+.mt-8 { margin-top:8px; }
+.mt-16 { margin-top:16px; }
+.mt-24 { margin-top:24px; }
+.mb-0 { margin-bottom:0; }
+.mb-8 { margin-bottom:8px; }
+.mb-16 { margin-bottom:16px; }
+.mb-24 { margin-bottom:24px; }
+
+/* Loading shimmer for outputs */
+.shimmer { background:linear-gradient(90deg, #0e1540 25%, #111a4a 37%, #0e1540 63%); background-size:400% 100%; animation:shimmer 1.4s ease infinite; }
+@keyframes shimmer { 0% { background-position:100% 0; } 100% { background-position:0 0; } }
+
+

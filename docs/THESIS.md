@@ -58,3 +58,40 @@ References
 References available upon request; key sources include literature on argument mining, stance detection, RAG, and moderation tooling.
 
 
+Appendix A. Implementation Details
+
+A.1 Multi‑Agent Orchestration
+
+Agents are instantiated with concise, role‑specific prompts and a shared evidence context. The Mediator consumes both sides’ arguments and the Fact‑Checker’s citations to produce a structured synthesis containing: (i) claims, (ii) evidence links, (iii) areas of agreement, (iv) points of contention, and (v) recommended next steps (e.g., additional sources to retrieve).
+
+A.2 Retrieval Configuration
+
+- Embedding model: sentence‑level transformer (interchangeable)
+- Vector store: Chroma DB, persisted with source metadata
+- Retrieval: cosine similarity with top‑k selection and score normalization
+
+A.3 Moderation Signals
+
+- Linguistic cues: overgeneralization, assertion bias, us‑vs‑them framing
+- Evidence balance: citation counts and scores across positions
+- Disagreement magnitude: divergence between Proponent and Opponent rationales
+
+A.4 Efficiency Techniques
+
+- Batch embedding queries and parallel retrieval
+- Lightweight prompts and streaming outputs
+- Caching of retrieval results for frequent topics
+
+Appendix B. Ethics and Safety Considerations
+
+- Human‑in‑the‑loop: outputs are designed to inform, not replace, moderator decisions
+- Transparency: role‑specific rationales and citations accompany scores
+- Bias risks: continuous evaluation on diverse datasets; annotation guidelines to mitigate rater bias
+
+Appendix C. Reproducibility Notes
+
+- Fixed random seeds where applicable; frozen corpus snapshot for evaluation
+- Configuration captured in `backend/app/config.py`; API behavior defined in `backend/app/main.py`
+- Demo UI (`frontend/`) exercises core endpoints for quick verification
+
+
