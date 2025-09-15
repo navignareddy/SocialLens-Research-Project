@@ -1,4 +1,12 @@
-SocialLens: Multi-Agent Social Media Debate Analysis & Moderation
+<div align="center">
+
+<img src="assets/banner.svg" alt="SocialLens banner" width="100%"/>
+
+# SocialLens: Multi‑Agent Social Media Debate Analysis & Moderation
+
+Minimal, research‑oriented demo showcasing multi‑agent debate structuring, retrieval‑grounded misinformation detection, and bias monitoring.
+
+</div>
 
 Overview
 
@@ -85,6 +93,11 @@ Repository guide
 - `docs/` Thesis, research plan, evaluation, changelog
 
 Citation
+Live demo
+
+- Enable GitHub Pages: repository Settings → Pages → Source: "Deploy from a branch", Branch: `main`, Folder: `/docs`
+- Then open: `https://navignareddy.github.io/SocialLens-Research-Project/`
+
 
 If you use or extend SocialLens in research, please cite this repository.
 

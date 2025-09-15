@@ -1,0 +1,20 @@
+<svg width="1280" height="320" viewBox="0 0 1280 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="g1" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#6AA6FF"/>
+      <stop offset="100%" stop-color="#9E8BFF"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#6AA6FF" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#6AA6FF" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1280" height="320" fill="#0b1020"/>
+  <circle cx="260" cy="40" r="260" fill="url(#glow)"/>
+  <circle cx="1100" cy="-20" r="280" fill="url(#glow)"/>
+  <g transform="translate(120,120)">
+    <text x="0" y="0" font-family="Helvetica, Arial, sans-serif" font-size="40" font-weight="800" fill="url(#g1)">SocialLens</text>
+    <text x="0" y="42" font-family="Helvetica, Arial, sans-serif" font-size="18" fill="#c9d3ff">Multi‑Agent Debate Analysis & Moderation</text>
+  </g>
+</svg>
+
